@@ -1,70 +1,78 @@
 # Portfolio · Miguel Ángel Rosingana
 
-Portfolio personal de **Data Analyst**. Una sola página, sin frameworks ni proceso
-de build: `index.html` con HTML, CSS y JavaScript plano.
+Portfolio personal de **Data Analyst**. HTML, CSS y JavaScript sin frameworks
+ni proceso de build.
 
 **→ [miguelangelrosingana.github.io/portfolio](https://miguelangelrosingana.github.io/portfolio/)**
 
-![Vista previa del portfolio](og.png)
+![Vista previa del portfolio](assets/og.png)
 
 ---
 
 ## Qué hay dentro
 
-Tres proyectos de análisis de datos contados en formato **Problema / Enfoque /
-Resultado**, con las capturas de los informes: un modelo financiero en Power BI
-sobre un esquema en estrella, un modelo de temporada a nivel de evento y una
-automatización de limpieza de datos con Python y VBA.
+Hero con la credencial Microsoft PL-300, la historia de cómo llegué a los
+datos desde el desarrollo web, cómo trabajo (modelado, automatización,
+comunicación), una trayectoria dividida en **Experiencia** y **Formación**, y
+tres proyectos contados en formato **Problema / Enfoque / Resultado** —un
+modelo financiero en Power BI sobre un esquema en estrella, el seguimiento de
+una temporada del FC Barcelona a nivel de evento, y EcoChef, mi TFG en
+Flask— cada uno con un visor de capturas por pestañas.
 
 ## Decisiones técnicas
 
-- **Sin dependencias.** Ni framework, ni bundler, ni gestor de paquetes. La página
-  entera es un archivo que se abre con doble clic; la única petición externa es la
-  de las tipografías.
-- **Bilingüe ES/EN sin duplicar páginas.** Cada texto lleva sus dos versiones en
-  atributos `data-es` y `data-en`; un botón las intercambia y guarda la
-  preferencia. Al entrar se detecta el idioma del navegador.
-- **Tema claro y oscuro.** Toda la paleta son variables CSS en `:root`. Por
-  defecto respeta el tema del sistema del visitante y el interruptor lo fuerza.
-- **Imágenes incrustadas.** La foto y las capturas van en base64 dentro del HTML,
-  en WebP: la página se ve completa aunque se abra el archivo suelto y se ahorran
-  peticiones. Los originales quedan en `img/`.
-- **Responsive y accesible.** Sin scroll horizontal a 360 px, navegación por
-  teclado en el visor de capturas y `prefers-reduced-motion` respetado.
+- **Sin dependencias.** Ni framework, ni bundler, ni gestor de paquetes.
+  Vanilla JS con patrón IIFE; funciona igual en `file://`, GitHub Pages o
+  cualquier hosting estático.
+- **Bilingüe ES/EN sin duplicar páginas.** El español vive directamente en el
+  HTML; `lib/manifest.js` trae el diccionario en inglés y `main.js` lo
+  intercambia con un botón, guardando la preferencia.
+- **Tema claro y oscuro.** Paleta en variables CSS (`:root` / `[data-theme]`),
+  con transición circular al cambiar.
+- **Contenido primero.** El HTML lleva todo el texto e imágenes; el JS solo
+  anima, revela al hacer scroll y monta el visor de capturas. Con JavaScript
+  desactivado se sigue viendo todo.
+- **Responsive real.** Composición propia en móvil, sin scroll horizontal en
+  ningún ancho, y accesible (foco visible, `alt` en toda imagen,
+  `prefers-reduced-motion` respetado en las animaciones intrusivas).
 
 ## Stack
 
-`HTML` · `CSS` (grid, variables, `color-mix`) · `JavaScript` (sin librerías) ·
-`GitHub Pages`
+`HTML` · `CSS` (grid, variables, `clamp()`, `color-mix`) · `JavaScript`
+(vanilla) · `GitHub Pages`
 
 ## Estructura
 
 ```
-├── index.html            La página completa: marcado, estilos y scripts
-├── cv.pdf                CV que descarga el botón de la portada
-├── og.png                Tarjeta de previsualización al compartir el enlace
-├── favicon.svg           Icono de pestaña
-├── apple-touch-icon.png  Icono al guardar la web en el móvil
-└── img/                  Originales de la foto y las capturas
+├── index.html            Marcado completo: contenido en español + estructura
+├── styles.css            Estilos, en secciones
+├── main.js               Punto de entrada (IIFE): i18n, tema, reveals, visor
+├── lib/manifest.js        Datos + diccionario en inglés (window.__BRAND__)
+├── favicon.svg
+└── assets/
+    ├── img/*.webp         Foto y capturas de los informes
+    ├── og.png             Tarjeta de previsualización al compartir el enlace
+    └── *.pdf              CV descargable
 ```
 
 ## Desarrollo
 
-No hace falta servidor: abre `index.html` en el navegador. Para añadir un
-proyecto, dentro de la sección `PROYECTOS` hay una plantilla comentada con la
-estructura de una ficha.
+No hace falta build ni servidor para casi todo: abre `index.html` en el
+navegador. Para depurar el visor de capturas o las transiciones, sirve la
+carpeta con cualquier servidor estático (por ejemplo `python -m http.server`).
 
 ---
 
 ## English
 
-Personal **Data Analyst** portfolio. A single page with no frameworks and no
-build step — plain HTML, CSS and JavaScript, served from GitHub Pages.
+Personal **Data Analyst** portfolio. Plain HTML, CSS and vanilla JavaScript,
+no frameworks, no build step, served from GitHub Pages.
 
-Bilingual (Spanish/English) through `data-*` attributes, light and dark themes
-driven by CSS variables, and images embedded as base64 WebP so the page renders
-even as a standalone file. Three data projects, each told as Problem / Approach /
-Result, with screenshots of the reports.
+Bilingual (Spanish content in the HTML, English dictionary in
+`lib/manifest.js`), light/dark theme via CSS variables, content-first markup
+so the page works with JavaScript off, and a tabbed screenshot viewer for the
+two Power BI projects. Three data projects, each told as Problem / Approach /
+Result.
 
 ---
 
