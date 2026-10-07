@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miguel Ángel Rosingana — Data Analyst · Power BI, DAX, SQL</title>
-  <meta name="description" content="Data Analyst en Madrid. Convierto datos dispersos en modelos que se sostienen: Power BI, DAX, SQL y Python. Certificado Microsoft PL-300.">
+  <title>Miguel Ángel Rosingana — Data Analyst · Data Engineering</title>
+  <meta name="description" content="Data Analyst en Madrid, orientado a Data Engineering. Pipelines ELT en Python y SQL, modelos en estrella y Power BI. Certificado Microsoft PL-300.">
   <meta name="author" content="Miguel Ángel Rosingana">
   <meta name="theme-color" content="#f5f2ea">
   <meta name="color-scheme" content="light dark">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Miguel Ángel Rosingana — Data Analyst">
-  <meta property="og:description" content="Convierto datos dispersos en modelos que se sostienen. Power BI, DAX, SQL y Python · Microsoft PL-300 · Madrid.">
+  <meta property="og:title" content="Miguel Ángel Rosingana — Data Analyst · Data Engineering">
+  <meta property="og:description" content="Convierto datos dispersos en modelos que se sostienen. Python, SQL, PostgreSQL y Power BI · Microsoft PL-300 · Madrid.">
   <meta property="og:image" content="assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -44,10 +44,10 @@
     "@type": "Person",
     "name": "Miguel Ángel Rosingana",
     "jobTitle": "Data Analyst",
-    "description": "Data Analyst en Madrid. Power BI, DAX, SQL y Python.",
+    "description": "Data Analyst en Madrid, orientado a Data Engineering. Python, SQL, PostgreSQL y Power BI.",
     "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
     "email": "mailto:miguel.rosin@gmail.com",
-    "knowsAbout": ["Power BI", "DAX", "SQL", "PostgreSQL", "Google BigQuery", "Python", "Power Query", "Modelado de datos"],
+    "knowsAbout": ["Python", "SQL", "PostgreSQL", "Pipelines ELT", "Ingeniería de datos", "Modelado de datos", "GitHub Actions", "Power BI", "DAX", "Google BigQuery", "Power Query"],
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "name": "Microsoft Certified: Power BI Data Analyst Associate (PL-300)",
@@ -134,7 +134,7 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow fade-up" style="--d:60ms"><span class="eyebrow-dot" aria-hidden="true"></span>Data Analyst · Madrid</p>
+          <p class="eyebrow fade-up" style="--d:60ms"><span class="eyebrow-dot" aria-hidden="true"></span>Data Analyst · Data Engineering · Madrid</p>
 
           <h1 class="hero-name" aria-label="Miguel Ángel Rosingana">
             <span class="line" aria-hidden="true"><span style="--i:0">Miguel Ángel</span></span>
@@ -143,7 +143,7 @@
 
           <div class="hero-lower">
             <p class="hero-tag fade-up" style="--d:520ms" data-i18n-html="hero.tag">Convierto datos dispersos en <em>modelos que se sostienen</em>.</p>
-            <p class="hero-lead fade-up" style="--d:620ms" data-i18n="hero.lead">Un esquema en estrella limpio, medidas DAX que dicen la verdad y un informe que responde la pregunta en la primera pantalla.</p>
+            <p class="hero-lead fade-up" style="--d:620ms" data-i18n="hero.lead">Pipelines que cargan bien, un esquema en estrella limpio y un informe que responde la pregunta en la primera pantalla.</p>
 
             <div class="hero-cta fade-up" style="--d:720ms">
               <a class="btn btn--primary" data-mail href="mailto:miguel.rosin@gmail.com?subject=Contacto%20desde%20tu%20portfolio">
@@ -182,7 +182,7 @@
           <p class="band-l">Data Analyst</p>
         </div>
         <div class="band-cell" data-reveal style="--d:80ms">
-          <p class="band-v" data-i18n="band.2.v">Power BI, DAX, SQL y Python</p>
+          <p class="band-v" data-i18n="band.2.v">Python, SQL, PostgreSQL y Power BI</p>
           <p class="band-l" data-i18n="band.2.l">Especialidad</p>
         </div>
         <div class="band-cell" data-reveal style="--d:160ms">
@@ -210,7 +210,7 @@
           <blockquote class="pull" data-reveal>
             <p data-i18n="origin.quote">Un modelo bien planteado contesta preguntas que nadie había hecho todavía.</p>
           </blockquote>
-          <p data-reveal data-i18n="origin.p3">Fuera del trabajo sigo montando modelos por gusto: la electricidad de España y la temporada del Barça.</p>
+          <p data-reveal data-i18n="origin.p3">Fuera del trabajo sigo montando modelos por gusto: la electricidad de España y la temporada del Barça. Y cada vez más, los pipelines que dejan esos datos listos para analizar.</p>
         </div>
       </div>
     </section>
@@ -528,6 +528,18 @@
 
         <div class="stack-grid">
           <div class="stack-col" data-reveal style="--d:0ms">
+            <h3 class="h3" data-i18n="s2.h">Ingeniería de datos</h3>
+            <p class="stack-p" data-i18n="s2.p">Cargar, validar y modelar, de forma repetible.</p>
+            <ul class="stack-list">
+              <li>SQL</li>
+              <li>PostgreSQL</li>
+              <li>BigQuery</li>
+              <li data-i18n="s2.i4">Python (pandas, SQLAlchemy)</li>
+              <li data-i18n="s2.i5">ELT incremental</li>
+              <li data-i18n="s2.i6">Tests, GitHub Actions y Docker</li>
+            </ul>
+          </div>
+          <div class="stack-col" data-reveal style="--d:100ms">
             <h3 class="h3">Power BI</h3>
             <p class="stack-p" data-i18n="s1.p">Del modelo al informe publicado.</p>
             <ul class="stack-list">
@@ -536,16 +548,6 @@
               <li>Power Query</li>
               <li>Dataflows</li>
               <li data-i18n="s1.i5">RLS (seguridad por filas)</li>
-            </ul>
-          </div>
-          <div class="stack-col" data-reveal style="--d:100ms">
-            <h3 class="h3" data-i18n="s2.h">Datos</h3>
-            <p class="stack-p" data-i18n="s2.p">Extraer, consultar y transformar.</p>
-            <ul class="stack-list">
-              <li>SQL</li>
-              <li>PostgreSQL</li>
-              <li>BigQuery</li>
-              <li data-i18n="s2.i4">Python (pandas)</li>
             </ul>
           </div>
           <div class="stack-col" data-reveal style="--d:200ms">
@@ -617,7 +619,7 @@
   <!-- =========================== FOOTER =========================== -->
   <footer class="site-footer">
     <div class="container foot">
-      <p class="foot-l"><span class="foot-name">Miguel Ángel Rosingana</span> <span data-i18n="foot.role">Data Analyst · Madrid</span></p>
+      <p class="foot-l"><span class="foot-name">Miguel Ángel Rosingana</span> <span data-i18n="foot.role">Data Analyst · Data Engineering · Madrid</span></p>
       <p class="foot-c" data-i18n="foot.made">HTML, CSS y JavaScript. Sin frameworks.</p>
       <a class="foot-top" href="#top"><span data-i18n="foot.top">Volver arriba</span> <span aria-hidden="true">↑</span></a>
     </div>
