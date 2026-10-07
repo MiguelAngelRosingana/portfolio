@@ -210,7 +210,7 @@
           <blockquote class="pull" data-reveal>
             <p data-i18n="origin.quote">Un modelo bien planteado contesta preguntas que nadie había hecho todavía.</p>
           </blockquote>
-          <p data-reveal data-i18n="origin.p3">Fuera del trabajo sigo montando modelos por gusto: mis finanzas y la temporada del Barça.</p>
+          <p data-reveal data-i18n="origin.p3">Fuera del trabajo sigo montando modelos por gusto: la electricidad de España y la temporada del Barça.</p>
         </div>
       </div>
     </section>
@@ -375,46 +375,46 @@
           <p class="sec-sub" data-i18n="proj.sub">Cada ficha cuenta lo mismo: qué problema había, cómo lo abordé y qué salió.</p>
         </div>
 
-        <!-- ---------- 01 · Control financiero ---------- -->
-        <article class="project" id="p-finanzas">
+        <!-- ---------- 01 · Energía España (pipeline de datos) ---------- -->
+        <article class="project" id="p-energia">
           <div class="project-top">
             <header class="project-head" data-reveal>
               <p class="p-index" aria-hidden="true">01</p>
-              <h3 class="p-title" data-i18n="p1.title">Control financiero personal</h3>
-              <p class="p-kicker"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Excel</span></p>
-              <p class="p-note" data-i18n="p1.note">Datos de demostración</p>
+              <h3 class="p-title" data-i18n="p1.title">Pipeline de datos de la electricidad en España</h3>
+              <p class="p-kicker"><span>Python</span><span>SQL</span><span>PostgreSQL</span><span>Power BI</span></p>
+              <p class="p-note" data-i18n="p1.note">Datos reales · API pública</p>
               <dl class="p-facts">
-                <div><dt>4</dt><dd data-i18n="p1.f1">tablas de origen</dd></div>
-                <div><dt>6</dt><dd data-i18n="p1.f2">páginas de informe</dd></div>
-                <div><dt>1</dt><dd data-i18n="p1.f3">calendario compartido</dd></div>
+                <div><dt>1.375</dt><dd data-i18n="p1.f1">días de datos cargados</dd></div>
+                <div><dt>11</dt><dd data-i18n="p1.f2">controles de calidad</dd></div>
+                <div><dt>67</dt><dd data-i18n="p1.f3">tests automáticos</dd></div>
               </dl>
-              <a class="link-arrow" href="https://github.com/MiguelAngelRosingana/powerbi-control-financiero" target="_blank" rel="noopener">
+              <a class="link-arrow" href="https://github.com/MiguelAngelRosingana/energia-espana-pipeline" target="_blank" rel="noopener">
                 <span data-i18n="ui.repo">Ver repositorio</span>
                 <svg class="ico" aria-hidden="true"><use href="#i-arrow-ur"/></svg>
               </a>
             </header>
 
             <dl class="pfa" data-reveal style="--d:80ms">
-              <div class="pfa-row"><dt data-i18n="pfa.problem">Problema</dt><dd data-i18n="p1.problem">Una cartera de inversión y el gasto recurrente en loterías vivían por separado: cada área con su criterio de fechas y sus importes. Sin un sitio común, saber el balance real exigía rehacer las cuentas a mano cada mes.</dd></div>
-              <div class="pfa-row"><dt data-i18n="pfa.approach">Enfoque</dt><dd data-i18n="p1.approach">Cuatro tablas en Excel con cabeceras limpias, para que Power Query las cargue sin transformaciones frágiles, y un esquema en estrella unificado: calendario y dimensiones compartidos entre las dos áreas, de modo que un solo filtro de fecha mueve todo el informe. El histórico arranca en la posición real, no en un pasado inventado.</dd></div>
-              <div class="pfa-row"><dt data-i18n="pfa.result">Resultado</dt><dd data-i18n="p1.result">Un informe de seis páginas —resumen, inversiones, loterías, cuotas y deudas, ahorro y cierre mensual— con capital invertido, valor de cartera, plusvalía latente, ROI y balance neto en la misma vista. Separa aportación, traspaso y rendimiento, así que el dinero nuevo nunca se cuenta como rentabilidad.</dd></div>
+              <div class="pfa-row"><dt data-i18n="pfa.problem">Problema</dt><dd data-i18n="p1.problem">Los datos de generación y demanda eléctrica de España son públicos, pero llegan por una API con rarezas: límites de rango, un error 400 ambiguo, series que aparecen y desaparecen y revisiones de días ya publicados. Cargarlos con un script ingenuo da cifras que nadie puede reconciliar.</dd></div>
+              <div class="pfa-row"><dt data-i18n="pfa.approach">Enfoque</dt><dd data-i18n="p1.approach">Un pipeline ELT por capas —respuesta cruda, staging y modelo en estrella— con carga incremental por marca de agua y una ventana de solape que recoge las revisiones de la fuente. Once controles de calidad en SQL se ejecutan en la misma transacción: si uno de severidad error falla, no queda nada a medias en el modelo. Los tests usan respuestas reales de la API y una base PostgreSQL de verdad.</dd></div>
+              <div class="pfa-row"><dt data-i18n="pfa.result">Resultado</dt><dd data-i18n="p1.result">Tres años y medio de generación por tecnología y de demanda de los cinco sistemas eléctricos, cargados en unos cuatro minutos. Una ejecución diaria tarda unos ocho segundos y, si la fuente no cambia, no modifica nada. Encima, un informe de Power BI de tres páginas cuyas cifras coinciden con las vistas SQL: cuota renovable, mix por tecnología y comparativa entre sistemas.</dd></div>
             </dl>
           </div>
 
           <div class="shots" data-viewer>
             <figure class="shot-fig" data-reveal>
-              <a class="shot" href="assets/img/fin-resumen.webp" data-lightbox="p1" aria-label="Ampliar captura" data-i18n-attr="aria-label:ui.enlarge">
-                <img src="assets/img/fin-resumen.webp" width="1500" height="840" loading="lazy" decoding="async" alt="Informe de Power BI, página de resumen: valor de cartera, capital invertido, plusvalía latente, rentabilidad y detalle por activo." data-i18n-attr="alt:p1.alt1">
+              <a class="shot" href="assets/img/energia-resumen.webp" data-lightbox="p1" aria-label="Ampliar captura" data-i18n-attr="aria-label:ui.enlarge">
+                <img src="assets/img/energia-resumen.webp" width="1500" height="844" loading="lazy" decoding="async" alt="Informe de Power BI, página de resumen: generación, demanda y cuota renovable, y la cuota renovable mensual frente al mismo mes del año anterior." data-i18n-attr="alt:p1.alt1">
                 <span class="shot-zoom" aria-hidden="true"><svg class="ico"><use href="#i-expand"/></svg></span>
               </a>
-              <figcaption data-i18n="p1.cap1">Resumen · KPIs de cartera y juegos</figcaption>
+              <figcaption data-i18n="p1.cap1">Resumen · cuota renovable y generación por familia</figcaption>
             </figure>
             <figure class="shot-fig" data-reveal style="--d:100ms">
-              <a class="shot" href="assets/img/fin-inversiones.webp" data-lightbox="p1" aria-label="Ampliar captura" data-i18n-attr="aria-label:ui.enlarge">
-                <img src="assets/img/fin-inversiones.webp" width="1500" height="843" loading="lazy" decoding="async" alt="Informe de Power BI, página de inversiones: valor de mercado frente a capital aportado, mes a mes." data-i18n-attr="alt:p1.alt2">
+              <a class="shot" href="assets/img/energia-mix.webp" data-lightbox="p1" aria-label="Ampliar captura" data-i18n-attr="aria-label:ui.enlarge">
+                <img src="assets/img/energia-mix.webp" width="1500" height="844" loading="lazy" decoding="async" alt="Informe de Power BI, mix de generación: columnas apiladas por mes y matriz con el peso de cada tecnología por año." data-i18n-attr="alt:p1.alt2">
                 <span class="shot-zoom" aria-hidden="true"><svg class="ico"><use href="#i-expand"/></svg></span>
               </a>
-              <figcaption data-i18n="p1.cap2">Inversiones · valor frente a capital aportado</figcaption>
+              <figcaption data-i18n="p1.cap2">Mix y evolución · peso de cada tecnología</figcaption>
             </figure>
           </div>
         </article>

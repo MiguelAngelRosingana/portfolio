@@ -15,7 +15,8 @@ Hero con la credencial Microsoft PL-300, la historia de cómo llegué a los
 datos desde el desarrollo web, cómo trabajo (modelado, automatización,
 comunicación), una trayectoria dividida en **Experiencia** y **Formación**, y
 tres proyectos contados en formato **Problema / Enfoque / Resultado** —un
-modelo financiero en Power BI sobre un esquema en estrella, el seguimiento de
+pipeline de datos de la electricidad de España (Python, SQL, PostgreSQL y
+Power BI), el seguimiento de
 una temporada del FC Barcelona a nivel de evento, y EcoChef, mi TFG en
 Flask— cada uno con un visor de capturas por pestañas.
 
